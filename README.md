@@ -40,10 +40,10 @@ Como o Pywikibot não possui a família da Minecraft Wiki por padrão, nós prim
 3. Pronto! Você deve ter notado a criação de uma nova pasta chamada `families` e, dentro, um arquivo com esse nome: `(id)_family.py`. É disso que precisamos! Você não precisará mexer em nada.
 
 Antes de logarmos com a nossa conta na Wiki, é preciso criar um nome de usuário e senha de robô antes. Para isso, [acesse este link](https://pt.minecraft.wiki/w/Especial:BotPasswords) e entre com as suas credenciais. Você verá a página abaixo:
-![A página "Senhas de robôs" na Minecraft Wiki Brasil.](https://github.com/user-attachments/assets/d7ee227f-f279-439b-b9b7-953b208aa26f)
+![A página "Senhas de robôs" na Minecraft Wiki Brasil.](https://i.imgur.com/HIsIi7A.png)
 1. Digite um nome de usuário para o seu robô e clique em "Criar".
-2. Na tela abaixo, defina as permissões que o seu robô necessita e então clique em "Criar" novamente. Eu marquei todas.
-![Lista de permissões possíveis para habilitar no robô.](https://github.com/user-attachments/assets/095cd7b8-e3f4-4b2c-9372-2d4057dd386f)
+2. Na tela abaixo, defina as permissões que o seu robô necessita e então clique em "Criar" novamente. Eu marquei todas.<br>
+![Lista de permissões possíveis para habilitar no robô.](https://i.imgur.com/GdMusRo.png)
 3. Uma última página será aberta e, dessa vez, com a senha única que você deverá anotar em algum lugar. Precisaremos dela para o próximo passo.
 
 > Lembrando que, se o seu objetivo for fazer **grandes edições em massa**, considere **criar uma conta secundária** e pedir para [alguém da Weird Gloop](https://pt.minecraft.wiki/w/Minecraft_Wiki:Lista_da_equipe_Weird_Gloop) (hospedagem) ou um [burocrata](https://pt.minecraft.wiki/w/Especial:Lista_de_usuários?group=bureaucrat) para lhe conceder o grupo de usuário "Robôs". Dessa forma, você evita poluir as [mudanças recentes da Wiki](https://pt.minecraft.wiki/w/Especial:Mudanças_recentes) e recebe um filtro especial nas suas edições. Veja, por exemplo, [a minha conta](https://pt.minecraft.wiki/w/Usuário:Faaribot).
