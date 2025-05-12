@@ -11,8 +11,9 @@
 *Faaribot* é o nome do robô que eu utilizo na Minecraft Wiki Brasil para realizar certas tarefas de automatização. Ele é feito totalmente em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg" alt="Logotipo da linguagem de programação Python" width="16px"> **Python** com o uso da biblioteca [Pywikibot](https://www.mediawiki.org/wiki/Manual:Pywikibot), conectando ao site através da minha conta secundária e executando os *scripts* em meu nome.
 * Por ser de uso próprio, algumas funções podem – e muito provavelmente serão – limitadas **apenas a administradores**, como é o caso dos *scripts* que necessitam eliminar uma página, por exemplo, permissão essa **não** concedida aos editores.
 
-Atualmente, o meu robô possui três funções:
-1. ➡️ `movetotc.py`: Mover termos para *title-case*;
+Atualmente, o meu robô possui quatro funções:
+1. 🗑️ `delete.py`: Excluir páginas;
+2. ➡️ `movetotc.py`: Mover termos para *title-case*;
 > Isto é: de "Espada de madeira" para "Espada de **M**adeira", por exemplo.
 3. 🔁 `replace.py`: Substituir termos de uma página para outro;
 4. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
@@ -32,14 +33,14 @@ pip install importlib_metadata
 ```
 
 ### 3. Configurando o Pywikibot 🤖
-Assim que todas elas estiverem instaladas com sucesso, instale o próprio Pywikibot com a seguinte linha: `pip install pywikibot`. Em seguida, crie uma pasta no seu computador onde todos os arquivos de configuração que iremos gerar em seguida ficarão armazenados e abra-a com o <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/vscode/vscode-original.svg" alt="Logotipo do editor Visual Studio Code" width="16px"> Visual Studio Code ou o editor de sua preferência.
+Assim que todas elas forem baixadas, instale o próprio Pywikibot com a seguinte linha: `pip install pywikibot`. Em seguida, crie uma pasta no seu computador onde todos os arquivos de configuração que iremos gerar em seguida ficarão armazenados e abra-a com o <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/vscode/vscode-original.svg" alt="Logotipo do editor Visual Studio Code" width="16px"> Visual Studio Code ou o editor de sua preferência.
 
-Como o Pywikibot não possui a família da Minecraft Wiki por padrão, nós primeiro precisaremos criá-la com o comando `pwb generate_family_file` para depois logarmos com a conta na Wiki.
+Como o Pywikibot não possui a família da Minecraft Wiki por padrão, precisaremos criá-la primeiro com o comando `pwb generate_family_file` para depois fazermos login.
 1. Ao executá-lo, você deverá digitar a URL da Minecraft Wiki Brasil, que é: `pt.minecraft.wiki`, e, então, um nome curto para identificá-la. Eu optei por "mcw", mas você quem sabe.
 2. Na pergunta sobre criar ou não as *interwikis*, digite `N`. Caso queira um robô que opere nos outros idiomas da Wiki, então digite `e` e indique quais você deseja além do português.
-3. Pronto! Você deve ter notado a criação de uma nova pasta chamada `families` e, dentro, um arquivo com esse nome: `(id)_family.py`. É disso que precisamos! Você não precisará mexer em nada.
+3. Pronto! Você deve ter notado a criação de uma nova pasta chamada `families` e, dentro, um arquivo com esse nome: `(id)_family.py`. Você não precisará mexer em nada!
 
-Antes de logarmos com a nossa conta na Wiki, é preciso criar um nome de usuário e senha de robô antes. Para isso, [acesse este link](https://pt.minecraft.wiki/w/Especial:BotPasswords) e entre com as suas credenciais. Você verá a página abaixo:
+Antes de entrarmos com a nossa conta na Wiki, é preciso criar um nome de usuário e senha de robô antes. Para isso, [acesse este link](https://pt.minecraft.wiki/w/Especial:BotPasswords) e entre com as suas credenciais. Você verá a página abaixo:
 ![A página "Senhas de robôs" na Minecraft Wiki Brasil.](https://i.imgur.com/HIsIi7A.png)
 1. Digite um nome de usuário para o seu robô e clique em "Criar".
 2. Na tela abaixo, defina as permissões que o seu robô necessita e então clique em "Criar" novamente. Eu marquei todas.<br>
@@ -50,7 +51,7 @@ Antes de logarmos com a nossa conta na Wiki, é preciso criar um nome de usuári
 
 Agora, gere os arquivos de configuração do login com `pwb generate_user_files`.
 1. Como temos a família da Minecraft Wiki, digite o identificador que definimos antes e confirme. Em seguida, escolha `pt`.
-2. Em "*Username*", digite o nome de usuário da sua **conta principal** (sem ser a de robô que criamos antes) e prossiga. Escolha `N` para o próximo prompt.
+2. Em "*Username*", digite o nome de usuário da sua **conta principal** e prossiga. Escolha `N` para o próximo prompt.
 3. Escolha `y` para adicionar uma senha de robô (*BotPassword*) e informe o nome de usuário e senha **do seu robô**.
 > Não se preocupe se não ver a senha, ela é oculta por motivos de segurança. Você pode colar e confirmar sem problemas.
 4. Escolha `N` para os últimos dois prompts e pronto! Você deverá ver dois arquivos criados: `user-config.py` e `user-password.py`.
