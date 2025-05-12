@@ -1,9 +1,7 @@
-# TODO: Fazer ele indentar a chave final '}' corretamente e não colado com a vírgula do último elemento da lista.
+import pywikibot, unicodedata, re, os
 
-import pywikibot
-import unicodedata
-import re
-import os
+# TODO: Fazer ele indentar a chave final '}' corretamente numa nova linha e não colado com a vírgula do último elemento da lista.
+# TODO: Já abrir a lista automaticamente no computador do usuário para conferir em vez de ele ter que fazer isso manualmente.
 
 INDENTACAO = '        '  # 8 espaços (dois TABs)
 
@@ -49,19 +47,18 @@ site.login()
 
 pagina = pywikibot.Page(site, pagina_alvo)
 if not pagina.exists():
-    print(f"❌ A página '{pagina.title()}' não existe.")
+    print(f"❌ A página \"{pagina.title()}\" não existe.")
     exit()
 
-print(f"📄 Página encontrada: {pagina.title()}")
+print(f"📄 Página encontrada: \"{pagina.title()}\"")
 
 texto_original = pagina.text
 lista_bruta = extrair_lista(texto_original)
-
 if not lista_bruta:
     print("❌ A lista não foi encontrada na estrutura esperada.")
     exit()
 
-# 1. Exportar a lista original
+# 1. Exportar a lista original num arquivo .txt
 path_original = os.path.join(DATA_DIR, "lista_original.txt")
 with open(path_original, "w", encoding="utf-8") as f:
     f.write(lista_bruta)
@@ -79,6 +76,7 @@ with open(path_ordenada, "w", encoding="utf-8") as f:
 
 print("\n🔠 A lista ordenada foi salva como 'lista_ordenada.txt' na pasta 'data'.")
 input("⏸️  Antes de continuar, confira a nova lista. Pressione ENTER para aplicar na Wiki...")
+
 # 3. Substituir na página alvo
 texto_final = substituir_lista(texto_original, lista_ordenada)
 

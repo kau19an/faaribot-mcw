@@ -1,6 +1,4 @@
-import pywikibot
-import json
-import re
+import pywikibot, json, re
 
 # Protege blocos sensíveis (<nowiki>, <pre>, <code>, comentários etc.)
 def proteger_blocos(texto):
@@ -24,10 +22,12 @@ def substituir_palavra_exata(texto, antigo, novo):
     padrao = r'\b' + re.escape(antigo) + r'\b'
     return re.sub(padrao, novo, texto)
 
-# Carregar dados
-with open("scripts/data/replacetotitlecase.json", encoding="utf-8") as f:
+# Lê a lista de termos a serem substituídos em pares
+# - À esquerda: o termo atual; À direita: o novo termo.
+with open("scripts/data/replace.json", encoding="utf-8") as f:
     dados = json.load(f)
 
+# Encontra os termos atuais na página especificada em 'alvo'
 pagina_alvo = dados.get('alvo')
 if not pagina_alvo:
     print('⛔ Nenhuma página alvo foi definida na lista. Adicione páginas antes de executar o script.')
@@ -40,7 +40,6 @@ site = pywikibot.Site('pt', 'mcw')
 site.login()
 
 pagina = pywikibot.Page(site, pagina_alvo)
-
 if not pagina.exists():
     print(f'❌  A página "{pagina_alvo}" não existe.')
     exit()

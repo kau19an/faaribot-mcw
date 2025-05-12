@@ -1,23 +1,25 @@
-# TODO:
-# 1. Na parte da busca por redirecionamentos afluentes, o script deve manter o que há após as hashtags encontradas. Ou seja: se for "#REDIRECIONAMENTO [[Poção arremessável#Não fabricável]]", ele não pode simplesmente mover para "#REDIRECIONAMENTO [[Poção Arremessável]]", mas sim, "#REDIRECIONAMENTO [[Poção Arremessável#Não fabricável]]".
-# 2. Verificar se o redirecionamento buscado também não possui subpáginas a serem alteradas. Por exemplo, ao mover "Fogo de artifício" para "Fogo de Artifício", foi encontrado "Fogos de Artifício" e o script o moveu corretamente, mas não percebeu que ele também tinha uma subpágina "Fogos de Artifício/ED", ainda mantendo esse redirecionamento duplo.
-
-import pywikibot
+import pywikibot, json
 from pywikibot.page import Page
-import json
+
+# TODO: Na parte da busca por redirecionamentos afluentes, o script deve manter o que há após as hashtags encontradas. Ou seja: se for "#REDIRECIONAMENTO [[Poção arremessável#Não fabricável]]", ele não pode simplesmente mover para "#REDIRECIONAMENTO [[Poção Arremessável]]", mas sim, "#REDIRECIONAMENTO [[Poção Arremessável#Não fabricável]]".
+# TODO: Verificar se o redirecionamento buscado também não possui subpáginas a serem alteradas. Por exemplo, ao mover "Fogo de artifício" para "Fogo de Artifício", foi encontrado "Fogos de Artifício" e o script o moveu corretamente, mas não percebeu que ele também tinha uma subpágina "Fogos de Artifício/ED", ainda mantendo esse redirecionamento duplo.
 
 # Fazer conexão com a Wiki
 site = pywikibot.Site('pt', 'mcw')
 site.login()
 
-# Carregar as páginas da lista em pares
+# Lê a lista de páginas a serem movidas em pares
+# - À esquerda: o termo sem title-case;
+# - À direita: o termo com title-case.
 with open("scripts/data/movetotc.json", encoding="utf-8") as f:
     pares = json.load(f)
 
+# Verifica se há pelo menos uma página presente na lista
 if not pares:
     print('⛔ A lista está vazia. Adicione páginas antes de executar o script.')
     exit()
 
+# Define as mensagens que aparecerão nas mudanças recentes da Wiki
 resumo_deletar = 'Eliminada para mover "[[{orig}]]"'
 resumo_mover = 'Tradução oficial do jogo passou a usar "title-case".'
 
