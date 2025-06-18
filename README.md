@@ -11,12 +11,13 @@
 *Faaribot* é o nome do robô que eu utilizo na Minecraft Wiki Brasil para realizar certas tarefas de automatização. Ele é feito totalmente em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg" alt="Logotipo da linguagem de programação Python" width="16px"> **Python** com o uso da biblioteca [Pywikibot](https://www.mediawiki.org/wiki/Manual:Pywikibot), conectando ao site através da minha conta secundária e executando os *scripts* em meu nome.
 * Por ser de uso próprio, algumas funções podem – e muito provavelmente serão – limitadas **apenas a administradores**, como é o caso dos *scripts* que necessitam eliminar uma página, por exemplo, permissão essa **não** concedida aos editores.
 
-Atualmente, o meu robô possui quatro funções:
-1. 🗑️ `delete.py`: Excluir páginas;
-2. ➡️ `movetotc.py`: Mover termos para *title-case*;
+Atualmente, o meu robô possui cinco funções:
+1. 🗑️ `delete_page.py`: Excluir páginas;
+2. 🗑️ `delete_template.py`: Excluir predefinições;
+3. ➡️ `movetotc.py`: Mover termos para *title-case*;
 > Isto é: de "Espada de madeira" para "Espada de **M**adeira", por exemplo.
-3. 🔁 `replace.py`: Substituir termos de uma página para outro;
-4. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
+4. 🔁 `replace.py`: Substituir termos de uma página para outro;
+5. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
 
 ## 🧑🏽‍💻 Como posso usá-lo?
 ### 1. Instalando o Python 🐍

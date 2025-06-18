@@ -13,7 +13,7 @@ grupos = [
 ]
 
 # Lê a lista de páginas a serem excluídas
-caminho = "scripts/data/delete.json"
+caminho = "scripts/data/delete_page.json"
 with open(caminho, encoding="utf-8") as f:
     dados = json.load(f)
 
