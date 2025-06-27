@@ -12,12 +12,12 @@
 * Por ser de uso próprio, algumas funções podem – e muito provavelmente serão – limitadas **apenas a administradores**, como é o caso dos *scripts* que necessitam eliminar uma página, por exemplo, permissão essa **não** concedida aos editores.
 
 Atualmente, o meu robô possui cinco funções:
-1. 🗑️ `delete_page.py`: Excluir páginas;
-2. 🗑️ `delete_template.py`: Excluir predefinições;
-3. ➡️ `movetotc.py`: Mover termos para *title-case*;
-> Isto é: de "Espada de madeira" para "Espada de **M**adeira", por exemplo.
-4. 🔁 `replace.py`: Substituir termos de uma página para outro;
-5. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
+1. 📅 `convert_dates.py`: Converter datas (inglês → português);
+2. 🗑️ `delete_page.py`: Excluir páginas;
+3. 🗑️ `delete_template.py`: Excluir predefinições;
+4. ➡️ `move_page.py`: Mover páginas;
+5. 🔁 `replace.py`: Substituir termos de uma página para outro;
+6. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
 
 ## 🧑🏽‍💻 Como posso usá-lo?
 ### 1. Instalando o Python 🐍
