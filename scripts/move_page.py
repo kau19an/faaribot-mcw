@@ -9,9 +9,8 @@ site = pywikibot.Site('pt', 'mcw')
 site.login()
 
 # Lê a lista de páginas a serem movidas em pares
-# - À esquerda: o termo sem title-case;
-# - À direita: o termo com title-case.
-with open("scripts/data/movetotc.json", encoding="utf-8") as f:
+# - À esquerda: o título atual; À direita: o novo título.
+with open("scripts/data/move_page.json", encoding="utf-8") as f:
     pares = json.load(f)
 
 # Verifica se há pelo menos uma página presente na lista
@@ -20,8 +19,9 @@ if not pares:
     exit()
 
 # Define as mensagens que aparecerão nas mudanças recentes da Wiki
-resumo_deletar = 'Eliminada para mover "[[{orig}]]"'
-resumo_mover = 'Tradução oficial do jogo passou a usar "title-case".'
+resumo_deletar = 'Eliminada para mover "[[{orig}]]"' # Mantenha como está
+resumo_mover = ''
+#! Altere acima para o motivo pela qual deseja mover a(s) página(s)
 
 for origem_titulo, destino_titulo in pares.items():
     # Verificações iniciais
@@ -58,9 +58,9 @@ for origem_titulo, destino_titulo in pares.items():
         origem.move(
             newtitle=destino.title(),
             reason=resumo_mover,
-            movetalk=True,     # Move todas as discussões
-            movesubpages=True, # Move todas as subpáginas
-            noredirect=False   # Mantém o redirecionamento
+            movetalk=True,     # Controla se move todas as discussões ou não  (Padrão: True)
+            movesubpages=True, # Controla se move todas as subpáginas ou não  (Padrão: True)
+            noredirect=False   # Controla se mantém ou não o redirecionamento (Padrão: False)
         )
         print(f'\n✅ Sucesso ao mover!')
     except Exception as e:
