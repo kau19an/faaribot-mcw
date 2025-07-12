@@ -1,6 +1,5 @@
 apicache/
 families/
-lista_*.txt
 logs/
 pywikibot-*.lwp
 throttle.ctrl
