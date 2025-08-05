@@ -1,4 +1,4 @@
-## Tabela de conteúdos
+## Índice
 1. 🤔 [Para que serve?](#-para-que-serve)
 2. 🧑🏽‍💻 [Como posso usá-lo?](#-como-posso-usá-lo)<br>
 2.1. [Instalando o Python](#1-instalando-o-python-) 🐍<br>
@@ -17,7 +17,8 @@ Atualmente, o meu robô possui cinco funções:
 3. 🗑️ `delete_template.py`: Excluir predefinições;
 4. ➡️ `move_page.py`: Mover páginas;
 5. 🔁 `replace.py`: Substituir termos de uma página para outro;
-6. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
+6. ↩️ `rollback.py`: Restaura a revisão de uma página para o ID especificado;
+7. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
 
 ## 🧑🏽‍💻 Como posso usá-lo?
 ### 1. Instalando o Python 🐍
@@ -61,7 +62,7 @@ Para confirmar se o Pywikibot consegue mesmo logar na sua conta, use o comando `
 * Se você ver a mensagem "*Logged in on (id):pt as* (nome da sua conta)", deu tudo certo!
 
 ## ⚙️ Rodando os *scripts*
-A partir daqui, é você quem manda! Se quiser criar as suas próprias automatizações ou utilizar/se basear nas criadas para o meu robô, sinta-se a vontade! Nesse caso, caso tenha clonado o meu repositório, basta usar `pwb scripts/(nome do script)` e você os rodará!
+A partir daqui, é você quem manda! Se quiser criar as suas próprias automatizações ou utilizar/se basear nas criadas para o meu robô, sinta-se à vontade! Nesse caso, caso tenha clonado o meu repositório, basta usar `pwb scripts/(nome do script)` e você os rodará!
 
 ## ⏳ TODOs
 - [ ] Criar este README em inglês;
