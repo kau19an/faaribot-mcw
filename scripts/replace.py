@@ -69,7 +69,8 @@ texto_editado = restaurar_blocos(texto_editado_temp, blocos)
 # Verificar mudanças
 if texto_editado != texto_original:
     pagina.text = texto_editado
-    pagina.save(summary='Movendo termos para title-case para seguir a tradução no Crowdin.')
+    pagina.save(summary='')
+    #! Altere acima para o motivo pela qual deseja substituir o(s) termo(s)
     print('\n✅ A página foi salva com sucesso!')
 else:
     print('\n⚠️  Nenhuma alteração foi feita. Todos os termos já estavam atualizados.')
