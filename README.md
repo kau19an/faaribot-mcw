@@ -11,7 +11,7 @@
 *Faaribot* é o nome do robô que eu utilizo na Minecraft Wiki Brasil para realizar certas tarefas de automatização. Ele é feito totalmente em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg" alt="Logotipo da linguagem de programação Python" width="16px"> **Python** com o uso da biblioteca [Pywikibot](https://www.mediawiki.org/wiki/Manual:Pywikibot), conectando ao site através da minha conta secundária e executando os *scripts* em meu nome.
 * Por ser de uso próprio, algumas funções podem – e muito provavelmente serão – limitadas **apenas a administradores**, como é o caso dos *scripts* que necessitam eliminar uma página, por exemplo, permissão essa **não** concedida aos editores.
 
-Atualmente, o meu robô possui cinco funções:
+Atualmente, o meu robô possui oito funções:
 1. 📅 `convert_dates.py`: Converter datas (inglês → português);
 2. 🗑️ `delete_page.py`: Excluir páginas;
 3. 🗑️ `delete_template.py`: Excluir predefinições;
