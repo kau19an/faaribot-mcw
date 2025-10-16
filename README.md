@@ -18,7 +18,8 @@ Atualmente, o meu robô possui cinco funções:
 4. ➡️ `move_page.py`: Mover páginas;
 5. 🔁 `replace.py`: Substituir termos de uma página para outro;
 6. ↩️ `rollback.py`: Restaura a revisão de uma página para o ID especificado;
-7. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite).
+7. 🔠 `sortlist.py`: Ordenar alfabeticamente listas estruturadas em <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/lua/lua-original.svg" alt="Logoipo da linguagem de programação Lua" width="16px"> Lua [como essa](https://pt.minecraft.wiki/w/Módulo:SpriteFile/ItemSprite);
+8. 📁 `upload_files.py`: Enviar ou sobrescrever um ou múltiplos arquivos.
 
 ## 🧑🏽‍💻 Como posso usá-lo?
 ### 1. Instalando o Python 🐍

@@ -2,6 +2,7 @@ apicache/
 families/
 logs/
 pywikibot-*.lwp
+scripts/upload
 throttle.ctrl
 user-*.py
 venv/
